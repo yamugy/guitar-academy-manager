@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/guitar-academy-manager/static/css/main.894c460a.css",
+    "main.js": "/guitar-academy-manager/static/js/main.93ac94ec.js",
+    "index.html": "/guitar-academy-manager/index.html",
+    "main.894c460a.css.map": "/guitar-academy-manager/static/css/main.894c460a.css.map",
+    "main.93ac94ec.js.map": "/guitar-academy-manager/static/js/main.93ac94ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.894c460a.css",
+    "static/js/main.93ac94ec.js"
+  ]
+}
