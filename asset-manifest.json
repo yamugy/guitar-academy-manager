@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/student-academy-manager/static/css/main.894c460a.css",
-    "main.js": "/student-academy-manager/static/js/main.93ac94ec.js",
-    "index.html": "/student-academy-manager/index.html",
-    "main.894c460a.css.map": "/student-academy-manager/static/css/main.894c460a.css.map",
-    "main.93ac94ec.js.map": "/student-academy-manager/static/js/main.93ac94ec.js.map"
+    "main.css": "/guitar-academy-manager/static/css/main.894c460a.css",
+    "main.js": "/guitar-academy-manager/static/js/main.93ac94ec.js",
+    "index.html": "/guitar-academy-manager/index.html",
+    "main.894c460a.css.map": "/guitar-academy-manager/static/css/main.894c460a.css.map",
+    "main.93ac94ec.js.map": "/guitar-academy-manager/static/js/main.93ac94ec.js.map"
   },
   "entrypoints": [
     "static/css/main.894c460a.css",
