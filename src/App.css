@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #222;
-  color: #fff;
+  background-color: #f0f5f9;
+  color: #2c3e50;
   margin: 0;
   padding: 20px;
 }
@@ -48,14 +48,45 @@ button:hover {
 
 table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
-  margin-top: 20px;
 }
 
 th, td {
-  border: 1px solid #00ff00;
   padding: 10px;
-  text-align: left;
+  border: 1px solid #00ff00;
+  word-wrap: break-word;
+  vertical-align: top;
+}
+
+.name-cell {
+  width: 15%;
+}
+
+.phone-cell {
+  width: 15%;
+}
+
+.email-cell {
+  width: 25%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lesson-cell {
+  width: 35%;
+}
+
+.action-cell {
+  width: 10%;
+}
+
+.name-cell, .phone-cell, .email-cell, .lesson-cell, .action-cell {
+  padding: 8px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 th {
@@ -124,6 +155,19 @@ th {
   background-color: #00cc00;
 }
 
+.lesson-form {
+  margin-top: 10px;
+}
+
+.lesson-form input {
+  width: calc(100% - 10px);
+  margin-bottom: 5px;
+}
+
+.lesson-form button {
+  margin-right: 5px;
+}
+
 @media (max-width: 768px) {
   table, thead, tbody, th, td, tr {
     display: block;
@@ -157,3 +201,516 @@ th {
     font-weight: bold;
   }
 }
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #00ff00;
+  background-color: #333;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  color: #00ff00;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid #00ff00;
+  border-radius: 3px;
+}
+
+.page-item.active .page-link {
+  background-color: #00ff00;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+}
+
+.lesson-entry {
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #00ff00;
+  border-radius: 3px;
+}
+
+.edit-btn {
+  margin-left: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.email-cell {
+  width: 250px;
+  max-width: 150px; /* 원하는 최대 너비로 조정하세요 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-upload {
+  margin-top: 5px;
+}
+
+.file-item {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.file-item button {
+  margin-left: 5px;
+  padding: 2px 5px;
+  font-size: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.file-item button:hover {
+  background-color: #45a049;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table th,
+.student-table td {
+  border: 1px solid #c9d6df;
+  padding: 8px;
+  text-align: left;
+}
+
+.student-table th:nth-child(1),
+.student-table td:nth-child(1) {
+  width: 8%;  /* 이름 칸 너비 줄임 */
+}
+
+.student-table th:nth-child(2),
+.student-table td:nth-child(2) {
+  width: 10%;  /* 전화번호 칸 너비 줄임 */
+}
+
+.student-table th:nth-child(3),
+.student-table td:nth-child(3) {
+  width: 18%;  /* 이메일 칸 너비 늘림 */
+}
+
+.student-table th:nth-child(4),
+.student-table td:nth-child(4) {
+  width: 22%;  /* 결제일 칸 너비 유지 */
+}
+
+.student-table th:nth-child(5),
+.student-table td:nth-child(5) {
+  width: 34%;  /* 수업 내역 칸 너비 유지 */
+}
+
+.student-table th:nth-child(6),
+.student-table td:nth-child(6) {
+  width: 8%;  /* 작업 칸 너비 유지 */
+}
+
+.student-table input[type="date"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #c9d6df;  /* 테두리 색상을 테이블 셀과 동일하게 설정 */
+  border-radius: 4px;
+  background-color: transparent;  /* 배경색 제거 */
+}
+
+.lesson-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f8e9;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  padding: 8px 10px;
+}
+
+.lesson-content {
+  flex-grow: 1;
+  margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #3e5869;
+}
+
+.lesson-edit-form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.lesson-edit-form input {
+  flex-grow: 1;
+  margin-right: 5px;
+  padding: 4px 8px;
+  font-size: 0.9em;
+  border: 1px solid #c9d6df;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #2c3e50;
+}
+
+.edit-button, .save-button, .cancel-button {
+  border: none;
+  padding: 4px 8px;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 0.85em;
+  transition: background-color 0.3s;
+  min-width: 45px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.edit-button {
+  background-color: #81c784;
+}
+
+.edit-button:hover {
+  background-color: #66bb6a;
+}
+
+.save-button {
+  background-color: #64b5f6;
+}
+
+.save-button:hover {
+  background-color: #42a5f5;
+}
+
+.cancel-button {
+  background-color: #e57373;
+}
+
+.cancel-button:hover {
+  background-color: #ef5350;
+}
+
+.lesson-item input[type="date"],
+.lesson-item input[type="text"] {
+  margin-right: 5px;
+  padding: 3px 5px;
+  font-size: 0.9em;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.edit-button {
+  background-color: #81c784;
+  color: white;
+  border: none;
+  padding: 2px 5px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 0.7em;
+  transition: background-color 0.3s;
+  min-width: 30px;
+  max-width: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.edit-button:hover {
+  background-color: #66bb6a;
+}
+
+.delete-button {
+  background-color: #ef9a9a;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #e57373;
+}
+
+.add-lesson-button {
+  background-color: #90caf9;
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.add-lesson-button:hover {
+  background-color: #64b5f6;
+}
+
+.student-form, .search-form {
+  background-color: #e3f2fd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.student-form h2, .search-form h2 {
+  color: #3e5869;
+  margin-top: 0;
+}
+
+.student-form input, .search-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #c9d6df;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.student-form button, .search-form button {
+  background-color: #81c784;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.student-form button:hover, .search-form button:hover {
+  background-color: #66bb6a;
+}
+
+.error-message {
+  color: #e57373;
+  margin-top: 10px;
+}
+
+.delete-lesson-button {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.delete-lesson-button:hover {
+  background-color: #ff3333;
+}
+
+.edit-button.delete-lesson-button {
+  background-color: #ff4d4d;
+}
+
+.edit-button.delete-lesson-button:hover {
+  background-color: #ff3333;
+}
+
+.student-form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.student-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #c9d6df;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.student-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #81c784;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.student-form button:hover {
+  background-color: #66bb6a;
+}
+
+.app-title {
+  text-align: center;
+  color: #3e5869;
+  margin-bottom: 20px;
+}
+
+.student-table input[type="date"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.payment-info input[type="date"],
+.payment-info input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #c9d6df;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.payment-info input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.payment-info input[type="number"]::-webkit-outer-spin-button,
+.payment-info input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.payment-item {
+  background-color: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment-item input[type="date"],
+.payment-item input[type="number"] {
+  width: 40%;
+  padding: 4px;
+  border: 1px solid #c9d6df;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.payment-item button {
+  padding: 4px 8px;
+  margin-left: 5px;
+  background-color: #81c784;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+}
+
+.payment-item button:hover {
+  background-color: #66bb6a;
+}
+
+.payment-add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.payment-add-form input {
+  padding: 3px;
+  font-size: 0.9em;
+}
+
+.payment-add-form button {
+  padding: 3px 5px;
+  font-size: 0.9em;
+}
+
+.payment-item span {
+  font-size: 0.9em;
+}
+
+.payment-item button {
+  padding: 2px 5px;
+  font-size: 0.8em;
+}
+
+.student-table th {
+  background-color: #e3f2fd;
+  color: #2c3e50;
+  font-weight: bold;
+  padding: 12px 8px;
+  border: 1px solid #c9d6df;
+  text-align: center;  /* 모든 제목을 가운데 정렬 */
+}
+
+.student-table td {
+  background-color: #ffffff;
+  border: 1px solid #c9d6df;
+  padding: 8px;
+}
+
+/* 이름, 전화번호, 이메일 칸 가운데 정렬 */
+.student-table td:nth-child(1),
+.student-table td:nth-child(2),
+.student-table td:nth-child(3) {
+  text-align: center;
+}
+
+/* 결제일과 수업 내역 칸은 왼쪽 정렬 유지 */
+.student-table td:nth-child(4),
+.student-table td:nth-child(5) {
+  text-align: left;
+}
+
+/* 작업 칸 가운데 정렬 */
+.student-table td:nth-child(6) {
+  text-align: center;
+}
+
+/* 나머지 스타일은 그대로 유지 */

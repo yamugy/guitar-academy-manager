@@ -1,46 +1,34 @@
 import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
 
 function StudentForm({ onAddStudent }) {
   const [name, setName] = useState('');
-  const [age, setAge] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
+  const [error, setError] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const studentData = {
       name,
-      age: Number(age),
       phone,
       email,
-      schedules: []
+      lessons: []
     };
     onAddStudent(studentData);
     setName('');
-    setAge('');
     setPhone('');
     setEmail('');
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h3>학생 등록</h3>
+    <form onSubmit={handleSubmit} className="student-form">
+      <h2>학생 등록</h2>
       <label htmlFor="name">이름:</label>
       <input
         id="name"
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        required
-      />
-      <label htmlFor="age">나이:</label>
-      <input
-        id="age"
-        type="number"
-        value={age}
-        onChange={(e) => setAge(e.target.value)}
         required
       />
       <label htmlFor="phone">전화번호:</label>
@@ -57,7 +45,8 @@ function StudentForm({ onAddStudent }) {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <button type="submit">학생 등록</button>
+      <button type="submit">등록</button>
+      {error && <p className="error-message">{error}</p>}
     </form>
   );
 }
