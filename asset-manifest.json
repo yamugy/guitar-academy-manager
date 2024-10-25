@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/guitar-academy-manager/static/css/main.f2010b86.css",
+    "main.css": "/guitar-academy-manager/static/css/main.400bab0b.css",
     "main.js": "/guitar-academy-manager/static/js/main.f4daf7a7.js",
     "index.html": "/guitar-academy-manager/index.html",
-    "main.f2010b86.css.map": "/guitar-academy-manager/static/css/main.f2010b86.css.map",
+    "main.400bab0b.css.map": "/guitar-academy-manager/static/css/main.400bab0b.css.map",
     "main.f4daf7a7.js.map": "/guitar-academy-manager/static/js/main.f4daf7a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2010b86.css",
+    "static/css/main.400bab0b.css",
     "static/js/main.f4daf7a7.js"
   ]
 }
