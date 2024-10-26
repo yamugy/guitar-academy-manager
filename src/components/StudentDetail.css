@@ -1,0 +1,248 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+}
+
+.modal-content input {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.modal-content button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #40a9ff;
+}
+
+.add-lesson-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.add-lesson-form input[type="date"],
+.add-lesson-form input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-lesson-form .add-btn {
+  padding: 8px 16px;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-lesson-form .add-btn:hover {
+  background-color: #40a9ff;
+}
+
+.delete-lesson-btn {
+  margin-left: 10px;
+  padding: 2px 5px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delete-lesson-btn:hover {
+  background-color: #ff7875;
+}
+
+.payment-status {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.payment-status.paid {
+  color: #52c41a;
+}
+
+.payment-status.unpaid {
+  color: #ff4d4f;
+}
+
+.change-payment-status-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.change-payment-status-btn:hover {
+  background-color: #40a9ff;
+}
+
+.payment-info {
+  margin-bottom: 15px;
+}
+
+.payment-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-form input {
+  flex: 1;
+  padding: 5px;
+}
+
+.payment-form button {
+  padding: 5px 10px;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.payment-form button:hover {
+  background-color: #40a9ff;
+}
+
+.payment-history {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.payment-history th,
+.payment-history td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.payment-history th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.payment-history tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.payment-history tr:hover {
+  background-color: #f5f5f5;
+}
+
+.student-info {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.payment-section, .lesson-section {
+  border: 1px solid #ddd;
+}
+
+.payment-info, .payment-form, .add-lesson-form {
+  margin-bottom: 20px;
+}
+
+.payment-form, .add-lesson-form {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-form input, .add-lesson-form input {
+  flex: 1;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #40a9ff;
+}
+
+.payment-history, .lesson-history {
+  list-style-type: none;
+  padding: 0;
+}
+
+.payment-history li, .lesson-history li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.delete-lesson-btn {
+  margin-left: 10px;
+  padding: 2px 5px;
+  background-color: #ff4d4f;
+}
+
+.delete-lesson-btn:hover {
+  background-color: #ff7875;
+}
+
+.close-btn {
+  margin-top: 20px;
+}
+
+.payment-history button {
+  margin: 0 5px;
+  padding: 2px 5px;
+  font-size: 0.8em;
+}
+
+.payment-history input {
+  width: 100%;
+  padding: 2px 5px;
+}

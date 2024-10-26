@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f5a623;
+  --background-color: #f0f2f5;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --border-color: #e1e4e8;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+}
+
+.student-card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.student-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.student-info > div {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.student-info h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.lesson-history {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.lesson-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.lesson-item:last-child {
+  border-bottom: none;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--primary-color);
+  padding: 2px 5px;
+}
+
+.btn-icon:hover {
+  color: var(--secondary-color);
+}
+
+.add-lesson-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.add-lesson-btn:hover {
+  background-color: #3a7bd5;
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  .app-title {
+    font-size: 24px;
+  }
+
+  .mobile-student-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobile-student-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px;
+  }
+
+  .mobile-card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .mobile-card-actions button {
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
