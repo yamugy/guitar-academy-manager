@@ -87,11 +87,39 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .student-info {
-    flex-direction: column;
+  .app-container {
+    padding: 10px;
   }
-  
-  .student-info > div {
-    padding: 5px 0;
+
+  .app-title {
+    font-size: 24px;
+  }
+
+  .mobile-student-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobile-student-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px;
+  }
+
+  .mobile-card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .mobile-card-actions button {
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
 }

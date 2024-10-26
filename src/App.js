@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import StudentForm from './components/StudentForm';
 import StudentList from './components/StudentList';
-import Pagination from './components/Pagination';
 import MobileStudentList from './components/MobileStudentList';
 import './App.css';
 
@@ -25,6 +24,15 @@ function App() {
       alert('학생 데이터를 저장하는 중 오류가 발생했습니다. 브라우저 저장소가 가득 찼을 수 있습니다.');
     }
   }, [students]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleAddStudent = (student) => {
     const existingStudent = students.find(s => s.name === student.name && s.email === student.email);
