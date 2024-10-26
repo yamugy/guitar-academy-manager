@@ -3,6 +3,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import StudentForm from './components/StudentForm';
 import StudentList from './components/StudentList';
 import Pagination from './components/Pagination';
+import MobileStudentList from './components/MobileStudentList';
 import './App.css';
 
 const CLIENT_ID = '875475466731-sb6kg6aht5580taicfbua01evpumlk1e.apps.googleusercontent.com';
@@ -14,6 +15,7 @@ function App() {
   });
   const [currentPage, setCurrentPage] = useState(1);
   const [studentsPerPage] = useState(5);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     try {
@@ -29,7 +31,15 @@ function App() {
     if (existingStudent) {
       alert('이미 등록된 학생입니다.');
     } else {
-      setStudents([...students, { ...student, id: Date.now(), lessons: [] }]);
+      setStudents([...students, { 
+        ...student, 
+        id: Date.now(), 
+        lessons: [], 
+        paymentStatus: '미결제',
+        lastPaymentAmount: null,
+        lastPaymentDate: null,
+        paymentHistory: []
+      }]);
     }
   };
 
@@ -64,18 +74,21 @@ function App() {
       <div className="app-container">
         <h1 className="app-title">기타 아카데미 매니저</h1>
         <StudentForm onAddStudent={handleAddStudent} />
-        <StudentList 
-          students={currentStudents} 
-          onDeleteStudent={handleDeleteStudent}
-          onUpdateStudent={handleUpdateStudent}
-          onAddLesson={handleAddLesson}
-        />
-        <Pagination
-          studentsPerPage={studentsPerPage}
-          totalStudents={students.length}
-          paginate={paginate}
-          currentPage={currentPage}
-        />
+        {isMobile ? (
+          <MobileStudentList
+            students={students}
+            onUpdateStudent={handleUpdateStudent}
+            onDeleteStudent={handleDeleteStudent}
+            onAddLesson={handleAddLesson}
+          />
+        ) : (
+          <StudentList
+            students={students}
+            onUpdateStudent={handleUpdateStudent}
+            onDeleteStudent={handleDeleteStudent}
+            onAddLesson={handleAddLesson}
+          />
+        )}
       </div>
     </GoogleOAuthProvider>
   );
